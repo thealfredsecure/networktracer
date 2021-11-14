@@ -1,3 +1,4 @@
+# importing CSV file which will record the data we got from the TraceRoute
 import csv 
     
 # Column names 
@@ -28,6 +29,9 @@ with open(filename, 'w') as csvfile:
 import subprocess
 
 #specify your cmd command, here tracert www.example.com
+
+# here tracert is for windows, but it can be changed as and when needed
+# like for Windows - cmdCommand = "tracert www.vitbhopal.ac.in" 
 cmdCommand = "tracert www.vitbhopal.ac.in"   
 
 process = subprocess.Popen(cmdCommand.split(), stdout=subprocess.PIPE)
